@@ -64,6 +64,7 @@ Pick a **Resource** and an **Operation**. Each n8n input item starts one Apify r
 | **Product** | Get Leaderboard | **Max Results** - How many products to collect | One item per launch, in leaderboard order, with votes, comments and topics |
 | **Product** | Search | **Search Query** (required) - What to search for on Product Hunt<br>**Max Results** - How many products to collect | One item per product, with name, tagline and URL |
 | **Product** | Get by Topic | **Topic** (required) - Topic slug as in the topic page URL, e.g. 'artificial-intelligence' for producthunt.com/topics/artificial-intelligence<br>**Max Results** - How many products to collect | One item per product, with name, tagline and URL |
+| **Product** | Get | **Product Slug** (required) - The product's slug, the last part of its URL (producthunt.com/products/notion -> notion) | One item with the product's details |
 
 ### Options
 
@@ -92,38 +93,26 @@ The node can be attached to an n8n **AI Agent** as a tool, so the agent can call
 - **Get Leaderboard**: one item per launch, with name, tagline, Product Hunt URL, product ID and slug, vote and comment counts, launch-day score, daily, weekly and monthly rank (for days already ranked), topics, thumbnail and featured date.
 - **Search** and **Get by Topic**: one item per product, with name, tagline, slug and Product Hunt URL.
 
-Fields of a returned item: `id`, `type`, `name`, `tagline`, `slug`, `productId`, `productSlug`, `url`, `votesCount`, `launchDayScore`, `commentsCount`, `topics`, `thumbnail`, `featuredAt`, `createdAt`, `productState`.
+Fields of a returned item: `id`, `type`, `name`, `tagline`, `slug`, `productId`, `productSlug`, `url`, `votesCount`, `launchDayScore`, `commentsCount`, `dailyRank`, `weeklyRank`, `monthlyRank`, `topics`, `thumbnail`, `featuredAt`, `createdAt`, `productState`.
 
 Example item (shortened):
 
 ```json
 {
-  "id": "1240198",
+  "id": "1261365",
   "type": "launch",
-  "name": "Flotnote",
-  "tagline": "Floating Markdown notes for Mac. Pay once, own your files",
-  "slug": "flotnote",
-  "productId": "1308574",
-  "productSlug": "flotnote",
-  "url": "https://www.producthunt.com/products/flotnote",
-  "votesCount": 0,
-  "launchDayScore": 0,
-  "commentsCount": 1,
-  "topics": [
-    {
-      "id": "...",
-      "slug": "...",
-      "name": "..."
-    },
-    {
-      "id": "...",
-      "slug": "...",
-      "name": "..."
-    },
-    "..."
-  ],
-  "thumbnail": "https://ph-files.imgix.net/6f9c5ef2-ad67-4935-81d9-99f558b2f72f.svg",
-  "featuredAt": "2026-09-29T00:01:00-07:00",
+  "name": "ZenABM ",
+  "tagline": "Create, optimize & report on LinkedIn Ads from any AI tool",
+  "slug": "zenabm",
+  "productId": "1131580",
+  "productSlug": "zena-by-zenabm-linkedin-ads-ai-chatbot",
+  "url": "https://www.producthunt.com/products/zena-by-zenabm-linkedin-ads-ai-chatbot",
+  "votesCount": 233,
+  "launchDayScore": 232,
+  "commentsCount": 64,
+  "dailyRank": 1,
+  "weeklyRank": 6,
+  "monthlyRank": 187,
   "...": "..."
 }
 ```
@@ -197,3 +186,4 @@ Tested with n8n 2.40 (self-hosted).
 - 0.1.0: Initial release
 - 0.1.1: First release published from GitHub Actions with an npm provenance statement
 - 0.1.2: Node category renamed to Marketing & Content, the name n8n's verification scanner accepts
+- 0.1.3: Get operation for one product by slug

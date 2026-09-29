@@ -53,6 +53,11 @@ function buildActorInput(
 			input.mode = 'topic';
 			break;
 		}
+		case 'product:get': {
+			input.slug = requireString.call(this, 'slug', 'Product Slug', itemIndex);
+			input.mode = 'detail';
+			break;
+		}
 		default:
 			throw new NodeOperationError(
 				this.getNode(),
@@ -115,6 +120,12 @@ export class ProductHuntScraper implements INodeType {
 					},
 				},
 				options: [
+					{
+						name: 'Get',
+						value: 'get',
+						description: 'Get one product by its Product Hunt slug',
+						action: 'Get a product',
+					},
 					{
 						name: 'Get Leaderboard',
 						value: 'getLeaderboard',
@@ -212,6 +223,22 @@ export class ProductHuntScraper implements INodeType {
 					show: {
 						resource: ['product'],
 						operation: ['getByTopic'],
+					},
+				},
+			},
+			{
+				displayName: 'Product Slug',
+				name: 'slug',
+				type: 'string',
+				required: true,
+				default: '',
+				placeholder: 'notion',
+				description:
+					"The product's slug, the last part of its URL (producthunt.com/products/notion -> notion)",
+				displayOptions: {
+					show: {
+						resource: ['product'],
+						operation: ['get'],
 					},
 				},
 			},
