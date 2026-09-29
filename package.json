@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-scrapeunblocker-producthunt",
-	"version": "0.1.2",
+	"version": "0.1.3",
 	"description": "n8n community node for the Product Hunt Scraper Apify Actor by ScrapeUnblocker: Product Hunt launches with votes, comments, topics, makers and website as JSON",
 	"license": "MIT",
 	"homepage": "https://github.com/ScrapeUnblocker/n8n-nodes-scrapeunblocker-producthunt#readme",
