@@ -1,0 +1,32 @@
+{
+	"node": "n8n-nodes-scrapeunblocker-producthunt.productHuntScraper",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": [
+		"Marketing",
+		"Data & Storage"
+	],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://github.com/ScrapeUnblocker/n8n-nodes-scrapeunblocker-producthunt#credentials"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://github.com/ScrapeUnblocker/n8n-nodes-scrapeunblocker-producthunt#readme"
+			}
+		]
+	},
+	"alias": [
+		"product hunt",
+		"producthunt",
+		"launches",
+		"startups",
+		"leaderboard",
+		"products",
+		"scraper",
+		"apify",
+		"scrapeunblocker"
+	]
+}
