@@ -98,14 +98,14 @@ Example item (shortened):
 
 ```json
 {
-  "id": "1246006",
+  "id": "1240198",
   "type": "launch",
-  "name": "Curie",
-  "tagline": "Assistant for scientific literature and document analysis.",
-  "slug": "curie-6",
-  "productId": "1313842",
-  "productSlug": "curie-4",
-  "url": "https://www.producthunt.com/products/curie-4",
+  "name": "Flotnote",
+  "tagline": "Floating Markdown notes for Mac. Pay once, own your files",
+  "slug": "flotnote",
+  "productId": "1308574",
+  "productSlug": "flotnote",
+  "url": "https://www.producthunt.com/products/flotnote",
   "votesCount": 0,
   "launchDayScore": 0,
   "commentsCount": 1,
@@ -122,7 +122,7 @@ Example item (shortened):
     },
     "..."
   ],
-  "thumbnail": "https://ph-files.imgix.net/cb6aeb2b-e4ba-48d4-aea5-05d7fdff13fe.vnd.microsoft...",
+  "thumbnail": "https://ph-files.imgix.net/6f9c5ef2-ad67-4935-81d9-99f558b2f72f.svg",
   "featuredAt": "2026-09-29T00:01:00-07:00",
   "...": "..."
 }
@@ -196,3 +196,4 @@ Tested with n8n 2.40 (self-hosted).
 
 - 0.1.0: Initial release
 - 0.1.1: First release published from GitHub Actions with an npm provenance statement
+- 0.1.2: Node category renamed to Marketing & Content, the name n8n's verification scanner accepts
